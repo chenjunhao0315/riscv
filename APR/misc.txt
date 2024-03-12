@@ -1,0 +1,7 @@
+The synthesis time is 8.2ns
+
+Our P&R goal is timing = 10ns Core utilization = 90%
+
+1. I/O pin: make input and output separate.
+2. Core utilization: Since our circuit is small, I set the core utilization from 80% gradually to 90%.
+3. Timing: The most difficult part. Since the external delay, our synthesis time is 8.2ns but in APR, we use 10ns as our final timing.

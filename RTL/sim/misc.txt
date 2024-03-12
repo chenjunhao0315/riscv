@@ -1,0 +1,11 @@
+QuickStart:
+Presim : python3.6 run_tp.py --case simple
+Gatesim: python3.6 run_tp.py --case simple --gate True
+
+Available case:
+Presim: simple xtest03 xtest04 xtest07 xtest09 memory_test aes256
+Gatesim: simple xtest03 (The rest of test will generate big .vcd)
+
+Usage:
+python3.6 run_tp.py --case [case_name in SW/test/examples/] --gate [True/False to run the gate sim]
+

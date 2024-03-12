@@ -1,0 +1,163 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : riscv_top_top
+Version: R-2020.09-SP5
+Date   : Wed Jan 18 09:47:25 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: PVT_1P08V_125C   Library: slow_vdd1v2
+Wire Load Model Mode: enclosed
+
+  Startpoint: top/core_U0/decode_stage/instruction_queue/read_addr_reg_0_
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: top/dcache_U0/clk_gate_lru_reg_4_/latch
+            (negative level-sensitive latch clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  riscv_top_top      Large                 slow_vdd1v2
+  riscv_instruction_queue
+                     Small                 slow_vdd1v2
+  riscv_core_SUPPORT_DUAL_ISSUE1_SUPPORT_BRANCH_PREDICTION1_SUPPORT_MULDIV1_DEBUG0
+                     Small                 slow_vdd1v2
+  riscv_issue_solver_SUPPORT_DUAL_ISSUE1_SUPPORT_MULDIV1_DEBUG0
+                     Small                 slow_vdd1v2
+  riscv_lsu          Small                 slow_vdd1v2
+  riscv_top_SUPPORT_DUAL_ISSUE1_SUPPORT_BRANCH_PREDICTION1_SUPPORT_MULDIV1_DEBUG0
+                     Small                 slow_vdd1v2
+  riscv_dcache       Small                 slow_vdd1v2
+  riscv_data_bus     Small                 slow_vdd1v2
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                 0.0000     0.0000
+  clock network delay (ideal)                           0.0000     0.0000
+  top/core_U0/decode_stage/instruction_queue/read_addr_reg_0_/CK (SMDFFHQX2)
+                                                        0.0000 #   0.0000 r
+  top/core_U0/decode_stage/instruction_queue/read_addr_reg_0_/Q (SMDFFHQX2)
+                                                        0.1183     0.1183 f
+  top/core_U0/decode_stage/instruction_queue/U8/Y (INVX1)
+                                                        0.0350     0.1532 r
+  top/core_U0/decode_stage/instruction_queue/U11/Y (INVX1)
+                                                        0.0559     0.2091 f
+  top/core_U0/decode_stage/instruction_queue/U51/Y (MX2XL)
+                                                        0.1080     0.3171 r
+  top/core_U0/decode_stage/instruction_queue/pc1_11_ (riscv_instruction_queue)
+                                                        0.0000     0.3171 r
+  top/core_U0/decode_stage/way1_pc_11_ (riscv_decode_stage_SUPPORT_MULDIV1)
+                                                        0.0000     0.3171 r
+  top/core_U0/issue_solve_stage/way1_pc_11_ (riscv_issue_solver_SUPPORT_DUAL_ISSUE1_SUPPORT_MULDIV1_DEBUG0)
+                                                        0.0000     0.3171 r
+  top/core_U0/issue_solve_stage/U1048/Y (OAI22XL)       0.0680     0.3851 f
+  top/core_U0/issue_solve_stage/U916/Y (NOR4XL)         0.1107     0.4958 r
+  top/core_U0/issue_solve_stage/U184/Y (AND4XL)         0.1775     0.6733 r
+  top/core_U0/issue_solve_stage/U909/Y (OAI211XL)       0.0755     0.7488 f
+  top/core_U0/issue_solve_stage/U961/Y (AOI21XL)        0.0669     0.8157 r
+  top/core_U0/issue_solve_stage/U905/Y (NAND2XL)        0.0520     0.8676 f
+  top/core_U0/issue_solve_stage/U423/Y (NOR2XL)         0.0483     0.9160 r
+  top/core_U0/issue_solve_stage/U898/Y (NAND2XL)        0.0519     0.9679 f
+  top/core_U0/issue_solve_stage/U622/Y (OR2XL)          0.0845     1.0524 f
+  top/core_U0/issue_solve_stage/U785/Y (INVXL)          0.0466     1.0990 r
+  top/core_U0/issue_solve_stage/U819/Y (NAND2XL)        0.0540     1.1529 f
+  top/core_U0/issue_solve_stage/U878/Y (NAND2X1)        0.0867     1.2396 r
+  top/core_U0/issue_solve_stage/U1303/Y (NOR2X1)        0.0753     1.3149 f
+  top/core_U0/issue_solve_stage/U47/Y (INVXL)           0.0457     1.3606 r
+  top/core_U0/issue_solve_stage/U340/Y (OAI22XL)        0.0622     1.4228 f
+  top/core_U0/issue_solve_stage/U1639/Y (AOI211XL)      0.0722     1.4950 r
+  top/core_U0/issue_solve_stage/U1642/Y (MXI2XL)        0.0795     1.5745 f
+  top/core_U0/issue_solve_stage/U1643/Y (MXI2XL)        0.0656     1.6401 r
+  top/core_U0/issue_solve_stage/U900/Y (NOR2XL)         0.0535     1.6936 f
+  top/core_U0/issue_solve_stage/U903/Y (NOR4XL)         0.0580     1.7517 r
+  top/core_U0/issue_solve_stage/U901/Y (NAND2XL)        0.0863     1.8380 f
+  top/core_U0/issue_solve_stage/U910/Y (NOR2XL)         0.0559     1.8939 r
+  top/core_U0/issue_solve_stage/U52/Y (OAI21XL)         0.0767     1.9706 f
+  top/core_U0/issue_solve_stage/U920/Y (NOR3X2)         0.1127     2.0833 r
+  top/core_U0/issue_solve_stage/U919/Y (NAND2X2)        0.1018     2.1851 f
+  top/core_U0/issue_solve_stage/U2280/Y (MX2XL)         0.1058     2.2909 r
+  top/core_U0/issue_solve_stage/lsu_ra_data[0] (riscv_issue_solver_SUPPORT_DUAL_ISSUE1_SUPPORT_MULDIV1_DEBUG0)
+                                                        0.0000     2.2909 r
+  top/core_U0/lsu_unit/ra_data[0] (riscv_lsu)           0.0000     2.2909 r
+  top/core_U0/lsu_unit/U241/Y (AO22XL)                  0.0857     2.3766 r
+  top/core_U0/lsu_unit/U244/CO (ADDHX1)                 0.0933     2.4698 r
+  top/core_U0/lsu_unit/U246/CO (ADDFX1)                 0.1235     2.5934 r
+  top/core_U0/lsu_unit/U393/CO (ADDFX1)                 0.1257     2.7191 r
+  top/core_U0/lsu_unit/U397/CO (ADDFX1)                 0.1258     2.8449 r
+  top/core_U0/lsu_unit/U52/CO (ADDFX1)                  0.1258     2.9707 r
+  top/core_U0/lsu_unit/U51/CO (ADDFX1)                  0.1258     3.0964 r
+  top/core_U0/lsu_unit/U402/CO (ADDFXL)                 0.1193     3.2157 r
+  top/core_U0/lsu_unit/U400/CO (ADDFXL)                 0.1198     3.3355 r
+  top/core_U0/lsu_unit/U405/CO (ADDFXL)                 0.1198     3.4553 r
+  top/core_U0/lsu_unit/U224/CO (ADDFXL)                 0.1198     3.5751 r
+  top/core_U0/lsu_unit/U220/S (ADDFXL)                  0.1465     3.7215 r
+  top/core_U0/lsu_unit/U215/Y (MX2XL)                   0.0902     3.8117 r
+  top/core_U0/lsu_unit/addr[10] (riscv_lsu)             0.0000     3.8117 r
+  top/core_U0/dcache_addr[10] (riscv_core_SUPPORT_DUAL_ISSUE1_SUPPORT_BRANCH_PREDICTION1_SUPPORT_MULDIV1_DEBUG0)
+                                                        0.0000     3.8117 r
+  top/dcache_U0/request_addr[10] (riscv_dcache)         0.0000     3.8117 r
+  top/dcache_U0/U578/Y (MXI2XL)                         0.0769     3.8886 f
+  top/dcache_U0/U986/Y (INVX1)                          0.0687     3.9573 r
+  top/dcache_U0/U452/Y (NAND2XL)                        0.0725     4.0297 f
+  top/dcache_U0/U534/Y (NOR2X1)                         0.0799     4.1096 r
+  top/dcache_U0/U300/Y (INVX1)                          0.0737     4.1833 f
+  top/dcache_U0/U298/Y (NOR2X1)                         0.1307     4.3140 r
+  top/dcache_U0/U1019/Y (BUFX3)                         0.1239     4.4379 r
+  top/dcache_U0/U423/Y (AOI22XL)                        0.0779     4.5158 f
+  top/dcache_U0/U485/Y (NAND4XL)                        0.0550     4.5708 r
+  top/dcache_U0/U566/Y (NOR4XL)                         0.0427     4.6135 f
+  top/dcache_U0/U564/Y (NAND2XL)                        0.0400     4.6535 r
+  top/dcache_U0/U420/Y (NOR2BX1)                        0.0915     4.7450 r
+  top/dcache_U0/U568/Y (INVXL)                          0.0786     4.8236 f
+  top/dcache_U0/U596/Y (NOR2XL)                         0.0557     4.8793 r
+  top/dcache_U0/U595/Y (BUFX2)                          0.0785     4.9578 r
+  top/dcache_U0/U3240/Y (AOI222X1)                      0.0988     5.0566 f
+  top/dcache_U0/U890/Y (INVXL)                          0.0601     5.1167 r
+  top/dcache_U0/bus_addr[31] (riscv_dcache)             0.0000     5.1167 r
+  top/data_bus/dcache_addr[31] (riscv_data_bus)         0.0000     5.1167 r
+  top/data_bus/U26/Y (NOR2XL)                           0.0387     5.1553 f
+  top/data_bus/U25/Y (NAND2XL)                          0.0382     5.1936 r
+  top/data_bus/U29/Y (NOR2XL)                           0.0382     5.2318 f
+  top/data_bus/U28/Y (NAND2XL)                          0.0398     5.2716 r
+  top/data_bus/U61/Y (NOR2XL)                           0.0377     5.3093 f
+  top/data_bus/U3/Y (INVXL)                             0.0380     5.3473 r
+  top/data_bus/U10/Y (NAND3X1)                          0.0814     5.4287 f
+  top/data_bus/dcache_bus_access_accept (riscv_data_bus)
+                                                        0.0000     5.4287 f
+  top/dcache_U0/bus_access_accept (riscv_dcache)        0.0000     5.4287 f
+  top/dcache_U0/U3236/Y (NAND2XL)                       0.0525     5.4812 r
+  top/dcache_U0/U3237/Y (NAND4X1)                       0.1651     5.6463 f
+  top/dcache_U0/clk_gate_lru_reg_4_/EN (SNPS_CLOCK_GATE_HIGH_riscv_dcache_mydesign_12)
+                                                        0.0000     5.6463 f
+  top/dcache_U0/clk_gate_lru_reg_4_/latch/D (TLATNXL)   0.0066     5.6529 f
+  data arrival time                                                5.6529
+
+  clock clk (fall edge)                                 4.1000     4.1000
+  clock network delay (ideal)                           0.0000     4.1000
+  top/dcache_U0/clk_gate_lru_reg_4_/latch/GN (TLATNXL)
+                                                        0.0000     4.1000 f
+  time borrowed from endpoint                           1.5529     5.6529
+  data required time                                               5.6529
+  --------------------------------------------------------------------------
+  data required time                                               5.6529
+  data arrival time                                               -5.6529
+  --------------------------------------------------------------------------
+  slack (MET)                                                      0.0000
+
+  Time Borrowing Information
+  --------------------------------------------------------------
+  clk nominal pulse width                               4.1000   
+  library setup time                                   -0.1001   
+  --------------------------------------------------------------
+  max time borrow                                       3.9999   
+  actual time borrow                                    1.5529   
+  --------------------------------------------------------------
+
+
+1

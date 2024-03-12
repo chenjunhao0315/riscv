@@ -1,0 +1,44 @@
+Command: vcs -f post_sim.f -R -full64 -debug_access+all +v2k +mindelays +neg_tchk \
+-l log.log
+                         Chronologic VCS (TM)
+         Version T-2022.06_Full64 -- Thu Jan 19 10:40:51 2023
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file simv.daidir/.vcs.timestamp and
+run VCS again.
+
+Command: /home/u108/u108061151/ICLAB/FinalProject/APR/posim/./simv +v2k +mindelays +neg_tchk -a log.log +access+r
+Chronologic VCS simulator copyright 1991-2022
+Contains Synopsys proprietary information.
+Compiler version T-2022.06_Full64; Runtime version T-2022.06_Full64;  Jan 19 10:40 2023
+Doing SDF annotation ...... Done
+@
+ ____                    _ 
+|  _ \   __ _  ___  ___ | |
+| |_) | / _` |/ __|/ __|| |
+|  __/ | (_| |\__ \\__ \|_|
+|_|     \__,_||___/|___/(_)
+                           
+$finish called from file "test_post_sim.v", line 268.
+$finish at simulation time              6755000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 6755000 ps
+CPU Time:      2.140 seconds;       Data structure size:  17.5Mb
+Thu Jan 19 10:40:55 2023
+CPU time: 2.237 seconds in simulation

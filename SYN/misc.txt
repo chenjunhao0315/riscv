@@ -1,0 +1,3 @@
+Our constrain mainly consider the external delay. Since that our after few time post layout, we find the external delay cause all device down. Therefore, we put lots of emphasis on it.
+
+To maximum our P&R core utilization, we make our synthesis time as low as possible, making more space for P&R.
