@@ -11,3 +11,8 @@ It is a final project of National Tsing Hua University (NTHU) EE429200 IC Design
 ### Usage
 1. `cd RTL/sim`
 2. `python run_tp.py --case <case_name>`
+
+### Contributor
+1. Jiun Hao Chen (CPU Core, Synthesis, APR, Sofrware, Report): duncan11514@gmail.com
+2. Pin Hsuan Shih (Peripherals, Verification, APR, Report): vivian900509@gmail.com
+3. Chun Hao Chang (Memory sub-system, Report): peter263658@gmail.com 
